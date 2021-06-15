@@ -1,0 +1,31 @@
+{
+  "name": "vanilla-thunder/oxid-module-popup",
+  "description": "simple popup module for OXID eShop v6.2 and newer",
+  "type": "oxideshop-module",
+  "license": [
+    "GPL-3.0"
+  ],
+  "authors": [
+    {
+      "name": "Marat Bedoev",
+      "homepage": "https://github.com/vanilla-thunder",
+      "email": "hello@mb-dev.pro",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">= 7.0",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "VanillaThunder\\": "../../../source/modules/vt"
+    }
+  },
+  "extra": {
+    "oxideshop": {
+      "target-directory": "vt/Popup"
+    }
+  }
+}
