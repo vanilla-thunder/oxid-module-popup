@@ -3,3 +3,9 @@
 
 # Installation:
 `composer require -n vanilla-thunder/oxid-module-popup --update-no-dev`
+
+![](thumbnail.jpg)
+![](settings.jpg)
+
+Demo:
+https://demoshop.mb-dev.pro/
