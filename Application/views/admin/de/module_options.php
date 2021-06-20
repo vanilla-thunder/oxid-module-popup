@@ -32,7 +32,11 @@ $aLang     = array(
     'SHOP_MODULE_sPopupContentType_static' => 'statischer Inhalt',
     'SHOP_MODULE_sPopupContentIdent'       => 'CMS Ident oder URL',
     'SHOP_MODULE_aPopupContentHTML'        => 'statischer Inhalt',
-    'SHOP_MODULE_sPopupWidth'              => 'Breite in px oder %',
+    'SHOP_MODULE_sPopupSize'               => 'Größe des Popups',
+    'SHOP_MODULE_sPopupSize_sm'            => 'klein',
+    'SHOP_MODULE_sPopupSize_default'       => 'standard',
+    'SHOP_MODULE_sPopupSize_lg'            => 'groß',
+    'SHOP_MODULE_sPopupSize_xl'            => 'extra groß',
     'SHOP_MODULE_blPopupDebug'             => 'Debug-Modus (Pop-Up wird jedes mal angezeigt)',
 
 );

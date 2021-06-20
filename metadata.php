@@ -43,7 +43,7 @@ $aModule = [
         ['group' => 'vt_popup_settings', 'name' => 'sPopupContentType', 'type' => 'select', 'value' => '', 'position' => 6, 'constraints' => 'cms|static|url'],
         ['group' => 'vt_popup_settings', 'name' => 'sPopupContentIdent', 'type' => 'str', 'value' => '', 'position' => 7],
         ['group' => 'vt_popup_settings', 'name' => 'aPopupContentHTML', 'type' => 'arr', 'value' => '', 'position' => 8],
-        ['group' => 'vt_popup_settings', 'name' => 'sPopupWidth', 'type' => 'str', 'value' => '', 'position' => 9],
+        ['group' => 'vt_popup_settings', 'name' => 'sPopupSize', 'type' => 'select', 'value' => 'default', 'constraints' => 'sm|default|lg|xl', 'position' => 9],
         ['group' => 'vt_popup_settings', 'name' => 'blPopupDebug', 'type' => 'bool', 'value' => false, 'position' => 10],
     ]
 ];

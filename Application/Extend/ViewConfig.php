@@ -44,7 +44,7 @@ class ViewConfig extends ViewConfig_parent
         $sIdentUrl = $cfg->getConfigParam('sPopupContentIdent');
         $aStatic = $cfg->getConfigParam('aPopupContentHTML');
         $sCookieValue = $cfg->getConfigParam('sPopupCookie');
-        $sWidth = ($cfg->getConfigParam('sPopupWidth')) ? " style='width: " . $cfg->getConfigParam('sPopupWidth') . ";' " : "";
+        $sSize = ($cfg->getConfigParam('sPopupSize') === 'default') ? "" : "modal-".$cfg->getConfigParam('sPopupSize');
 
         $sModalHTML = "";
 
@@ -102,11 +102,11 @@ class ViewConfig extends ViewConfig_parent
                     break;
             }
             $aModalHTML = [
-                "3" => "<div class='modal fade' id='vtpopup' tabindex='-1' role='dialog'><div class='modal-dialog' role='document'><div class='modal-content'><div class='modal-body'>" . $content . "</div></div></div></div>", //bootstrap 3
-                "4" => "<div class='modal fade' id='vtpopup' tabindex='-1' role='dialog'><div class='modal-dialog' role='document'><div class='modal-content'>".
+                "3" => "<div class='modal fade' id='vtpopup' tabindex='-1' role='dialog'><div class='modal-dialog {$sSize}' role='document'><div class='modal-content'><div class='modal-body'>" . $content . "</div></div></div></div>", //bootstrap 3
+                "4" => "<div class='modal fade' id='vtpopup' tabindex='-1' role='dialog'><div class='modal-dialog {$sSize}' role='document'><div class='modal-content'>".
                     ($sHeader ? "<div class='modal-header'><h5 class='modal-title'>".$sHeader."</h5><button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>" : "").
                     "<div class='modal-body'>" . $content . "</div></div></div></div>", //bootstrap 4
-                "5" => "<div class='modal fade' id='vtpopup' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'><div class='modal-dialog'><div class='modal-content'>".
+                "5" => "<div class='modal fade' id='vtpopup' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'><div class='modal-dialog {$sSize}'><div class='modal-content'>".
                     ($sHeader ? "<div class='modal-header'><h5 class='modal-title' id='exampleModalLabel'>".$sHeader."</h5><button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button></div>" : "").
                     "<div class='modal-body'>".$content."</div></div></div></div>" // bootstrap 5
             ];
