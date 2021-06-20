@@ -14,9 +14,7 @@
   ],
   "require": {
     "php": ">= 7.0",
-    "oxid-esales/oxideshop-metapackage-ce": ">= 6.2.0",
-    "ext-curl": "*",
-    "ext-json": "*"
+    "oxid-esales/oxideshop-metapackage-ce": ">= 6.2.0"
   },
   "autoload": {
     "psr-4": {
