@@ -49,7 +49,7 @@ class ViewConfig extends ViewConfig_parent
         $sModalHTML = "";
 
         // check of popup has already beed displayed
-        if ($blDebug || ($blPopup && ($sIdentUrl || $aStatic) && $_COOKIE['vtpopup'] !== $sCookieValue)) {
+        if (($blPopup && ($sIdentUrl || $aStatic))) {
             $smarty = Registry::getUtilsView()->getSmarty();
             $sSufix = ($smarty->_tpl_vars["__oxid_include_dynamic"]) ? '_dynamic' : '';
             $aScript = (array)$cfg->getGlobalParameter('scripts' . $sSufix);
@@ -118,7 +118,7 @@ class ViewConfig extends ViewConfig_parent
                 "5" => 'document.getElementById("vtpopup").show()',
             ];
             $aScript[] = $script.$aModalScript[$sBootstrapVersion];
-            $cfg->setGlobalParameter('scripts' . $sSufix, $aScript);
+            if($blDebug || $_COOKIE['vtpopup'] !== $sCookieValue) $cfg->setGlobalParameter('scripts' . $sSufix, $aScript);
 
             setcookie("vtpopup", $sCookieValue, time() + 14 * 24 * 60 * 60, "/");
 
